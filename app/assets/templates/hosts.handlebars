@@ -1,0 +1,59 @@
+<div class="ui segment">
+    <div class="ui page grid">
+      <div class="column">
+  <div>
+  
+    {{#if content}}
+      <table class="ui celled compact table">
+        <thead>
+          <tr>
+            <th colspan="5" class="ui center aligned">
+    <div class="ui red inverted small button">One</div>
+    <div class="ui yellow inverted small button">Two</div>
+    <div class="ui pink inverted small button">Three</div>
+            </th>
+          </tr>
+          <tr>
+            <th class="ui collapsing">
+              <div class="ui fitted toggle checkbox" id="checkboxheader">
+                <input type="checkbox" {{action "toogleall" on="change" target="view"}}><label></label>
+              </div>
+            </th>
+            <th class="ui sortable">Hostname</th>
+            <th class="center aligned">IP</th>
+            <th class="center aligned">Manage</th>
+            <th class="center aligned">Remove</th>
+          </tr>
+        </thead>
+        <tbody>    
+          {{#each content}}
+            <tr>
+              <td class="ui collapsing">
+                <div class="ui fitted toggle row checkbox">
+                  <input type="checkbox"><label></label>
+                </div>
+              </td>
+              <td>{{hostname}}</td>
+              <td class="center aligned">{{ip}}</td>
+              <td class="center aligned">
+                {{#link-to 'host.manage' this}}<i class="green edit icon"> </i>{{/link-to}}
+              </td>
+              <td class="center aligned">
+                <i class="red remove icon"></i>
+              </td>
+            </tr>
+          {{/each}}
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="5">comments</th>
+          </tr>
+        </tfoot>
+      </table>
+    {{else}}
+      No Hosts Yet
+    {{/if}}
+  </div>
+</div>
+</div>
+</div>

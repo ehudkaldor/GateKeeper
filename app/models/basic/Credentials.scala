@@ -2,7 +2,8 @@ package models.basic
 
 import com.github.aselab.activerecord.{ActiveRecord, Timestamps, Datestamps, ActiveRecordCompanion}
 
-abstract class Credentials(
+case class Credentials(
+  val username: String,
   override val id: Long = 0    
 ) extends ActiveRecord with Timestamps with Datestamps {
 
@@ -11,16 +12,16 @@ abstract class Credentials(
 object Credentials extends ActiveRecordCompanion[Credentials] {
 }
 
-case class UserCredentials(
-      
-) extends Credentials
-
-object UserCredentials extends ActiveRecordCompanion[UserCredentials] {
-}
-
-case class CertCredentials(
-      
-) extends Credentials
-
-object CertCredentials extends ActiveRecordCompanion[CertCredentials] {
-}
+//case class UserCredentials(
+//  override val id: Long = 0    
+//) extends Credentials
+//
+//object UserCredentials extends ActiveRecordCompanion[UserCredentials] {
+//}
+//
+//case class CertCredentials(
+//  override val id: Long = 0    
+//) extends Credentials
+//
+//object CertCredentials extends ActiveRecordCompanion[CertCredentials] {
+//}

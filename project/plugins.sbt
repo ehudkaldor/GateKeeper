@@ -17,4 +17,4 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-digest" % "1.0.0")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-mocha" % "1.0.0")
 
-addSbtPlugin("com.ketalo.play.plugins" % "emberjs" % "1.7.0")
+// addSbtPlugin("com.ketalo.play.plugins" % "emberjs" % "1.8.0")

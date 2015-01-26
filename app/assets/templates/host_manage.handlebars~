@@ -1,0 +1,2 @@
+{{view hostview}}
+host edit {{host.ip}}
